@@ -2,30 +2,25 @@ package nsh.codility;
 
 public class YearOfTheTiger2022A implements YearOfTheTiger2022Interface {
 
-	public int solution(int[] A, int L, int R) {
-		int N = A.length;
-
-		return N;
-	}
-
-	// -----------------------------------------
-	static void pf(String f, Object... v) {
-		System.out.printf(f, v);
-		System.out.println("");
-	}
-
-	public static void main1(String argv[]) {
-		int[] A = new int[] { 2, 3, 3, 4 };
-		int L = 3;
+	public int solution(String[] T) {
 		int R = 1;
-		int E = 3;
 
-		int R1 = (new YearOfTheTiger2022A()).solution(A, L, R);
-		pf("     K: %d", L);
-		pf("    in: %s", R);
-		pf("   out: %s", R1);
-		pf("expect: %s", E);
-		pf("Result: %s", (R1 == E) ? "good" : "bad");
+		int i[][][] = new int[26][26][26];
+		for (int j = 0; j < T.length; j++) {
+			char[] c = T[j].toCharArray();
+			c[0] -= 'a';
+			c[1] -= 'a';
+			c[2] -= 'a';
+			i[c[0]][c[1]][c[2]]++;
+			if (c[0] != c[1])
+				i[c[1]][c[0]][c[2]]++;
+			if (c[1] != c[2])
+				i[c[0]][c[2]][c[1]]++;
+			R = Math.max(R, i[c[0]][c[1]][c[2]]);
+			R = Math.max(R, i[c[1]][c[0]][c[2]]);
+			R = Math.max(R, i[c[0]][c[2]][c[1]]);
+		}
+
+		return R;
 	}
-	// java -cp target/classes nsh.codility.Challenge2021A
 }

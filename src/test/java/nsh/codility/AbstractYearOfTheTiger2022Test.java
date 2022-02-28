@@ -20,33 +20,84 @@ public abstract class AbstractYearOfTheTiger2022Test {
 	@Test
 	@DisplayName("Sample 1")
 	void test01() {
-		int[] A = new int[] { 2, 3, 3, 4 };
-		int L = 3;
-		int R = 1;
+		String[] T = new String[] { "aab", "cab", "baa", "baa" };
 		int E = 3;
 
-		assertEquals(E, testObject.solution(A, L, R));
+		assertEquals(E, testObject.solution(T));
 	}
 
 	@Test
 	@DisplayName("Sample 2")
 	void test02() {
-		int[] A = new int[] { 2, 3, 3, 4 };
-		int L = 3;
-		int R = 1;
-		int E = 3;
+		String[] T = new String[] { "zzz", "zbz", "zbz", "dgf" };
+		int E = 2;
 
-		assertEquals(E, testObject.solution(A, L, R));
+		assertEquals(E, testObject.solution(T));
 	}
 
 	@Test
-	@DisplayName("Sample 2")
+	@DisplayName("Sample 3")
 	void test03() {
-		int[] A = new int[] { 2, 3, 3, 4 };
-		int L = 3;
-		int R = 1;
+		String[] T = new String[] { "abc", "cba", "cab", "bac", "bca" };
 		int E = 3;
 
-		assertEquals(E, testObject.solution(A, L, R));
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("small_one_color")
+	void test_small_one_color() {
+		String[] T = new String[] { "eee", "eee", "eee", "eee", "eee" };
+		int E = 5;
+
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("Short")
+	void test_short() {
+		String[] T = new String[] { "abc" };
+		int E = 1;
+
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("Short 1")
+	void test_short1() {
+		String[] T = new String[] { "aaa" };
+		int E = 1;
+
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("Short 2")
+	void test_short2() {
+		String[] T = new String[] { "aab" };
+		int E = 1;
+
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("Long")
+	void test_long() {
+		String[] T = new String[] { "abc", "abc", "abc", "abc", "abc", "abc", "abc", "abc", "abc", "abc", "abc", "abc",
+				"abc" };
+		int E = 13;
+
+		assertEquals(E, testObject.solution(T));
+	}
+
+	@Test
+	@DisplayName("Super Long")
+	void test_long1() {
+		String[] T = new String[50000];
+		for (int i = 0; i < 50000; i++)
+			T[i] = "abc";
+		int E = 50000;
+
+		assertEquals(E, testObject.solution(T));
 	}
 }
