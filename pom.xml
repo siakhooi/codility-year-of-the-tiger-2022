@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>nsh.codility</groupId>
-	<artifactId>challenge-2021</artifactId>
+	<artifactId>year-of-the-tiger-2022</artifactId>
 	<version>1.0.0</version>
 
-	<name>challenge2021</name>
-	<url>https://github.com/siakhooi/codility-challenge-2021/</url>
+	<name>year-of-the-tiger-2022</name>
+	<url>https://github.com/siakhooi/codility-year-of-the-tiger-2022</url>
 
 	<build>
 		<plugins>

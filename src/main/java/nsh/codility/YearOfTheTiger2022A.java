@@ -1,6 +1,6 @@
 package nsh.codility;
 
-public class Challenge2021A implements Challenge2021Interface {
+public class YearOfTheTiger2022A implements YearOfTheTiger2022Interface {
 
 	public int solution(int[] A, int L, int R) {
 		int N = A.length;
@@ -20,7 +20,7 @@ public class Challenge2021A implements Challenge2021Interface {
 		int R = 1;
 		int E = 3;
 
-		int R1 = (new Challenge2021A()).solution(A, L, R);
+		int R1 = (new YearOfTheTiger2022A()).solution(A, L, R);
 		pf("     K: %d", L);
 		pf("    in: %s", R);
 		pf("   out: %s", R1);
