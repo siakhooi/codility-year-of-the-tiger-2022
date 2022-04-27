@@ -19,9 +19,9 @@
 
 ### Gold Award
 
-| File | Complexity | Result | Report                                                                                |
-| ---- | ---------- | ------ | ------------------------------------------------------------------------------------- |
-| `A`  | `O(N)`     | `Good` | [certE335J3](https://app.codility.com/cert/view/certE335J3-U7Z75MB8ZJA3HNN7/details/) |
+| File | Complexity | Result | Report                                                                            |
+| ---- | ---------- | ------ | --------------------------------------------------------------------------------- |
+| `A`  | `O(N)`     | `Good` | [E335J3](https://app.codility.com/cert/view/certE335J3-U7Z75MB8ZJA3HNN7/details/) |
 
 ### Solutions from Codility (Implementation in Java)
 
@@ -30,3 +30,6 @@
 | `B1` | `O(3**N * N) or O(N**2) or O(N * A**3)` | `Fail` | [DV9VG9](https://app.codility.com/demo/results/trainingDV9VG9-F3V/) |
 | `B2` | `O(3**N * N) or O(N**2) or O(N * A**3)` | `Fail` | [U32Y62](https://app.codility.com/demo/results/trainingU32Y62-5WX/) |
 | `B3` | `O(3**N * N) or O(N**2) or O(N * A**3)` | `Fail` | [QWCH5K](https://app.codility.com/demo/results/trainingQWCH5K-PS6/) |
+| `B4` | `O(N * A**3)`                           | `OK`   | [C5KMU2](https://app.codility.com/demo/results/trainingC5KMU2-FR2/) |
+
+- `B3`, `B4` are same solutions, using different implementations.

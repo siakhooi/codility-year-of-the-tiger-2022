@@ -1,11 +1,14 @@
 package nsh.codility;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
+import java.time.Duration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public abstract class AbstractYearOfTheTiger2022Test {
+
 	abstract YearOfTheTiger2022Interface getTestObject();
 
 	YearOfTheTiger2022Interface testObject;
@@ -96,7 +99,6 @@ public abstract class AbstractYearOfTheTiger2022Test {
 		for (int i = 0; i < 50000; i++)
 			T[i] = "abc";
 		int E = 50000;
-
-		assertEquals(E, testObject.solution(T));
+		assertTimeoutPreemptively(Duration.ofSeconds(5), () -> assertEquals(E, testObject.solution(T)));
 	}
 }
